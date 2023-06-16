@@ -16,5 +16,13 @@
   
   <!-- Add the secondOutput box -->
   <textarea id="secondOutput" rows="4" cols="50" readonly></textarea>
+  
+  <script>
+    // Retrieve the user input from localStorage
+    var savedUserInput = localStorage.getItem('userInput');
+    if (savedUserInput) {
+      document.getElementById('secondOutput').value = savedUserInput;
+    }
+  </script>
 </body>
 </html>
