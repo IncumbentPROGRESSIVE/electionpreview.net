@@ -1,15 +1,26 @@
 // Declare two boolean variables
-let Republican = false; // Change the value to true or false as needed
-let Democrat = false; // Change the value to true or false as needed
-let Moderate = true; // Corrected this line
+let Republican = false;
+let Democrat = false;
+let Moderate = true;
 
 // Get the input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
-var secondOutput = document.getElementById('secondOutput'); // Add this line
+var secondOutput = document.getElementById('userInput');
+
+// Retrieve the user input from localStorage, if available
+var savedUserInput = localStorage.getItem('userInput');
+if (savedUserInput) {
+  userInput.value = savedUserInput;
+  outputBox.value = savedUserInput + " test this";
+  secondOutput.value = savedUserInput;
+}
 
 // Listen for when the input box's value changes
 userInput.addEventListener('input', function() {
+  // Store the user's input in localStorage
+  localStorage.setItem('userInput', userInput.value);
+
   // Store the user's input in a variable
   var userText = userInput.value;
 
@@ -22,7 +33,7 @@ userInput.addEventListener('input', function() {
 
   // Update the output box with the user's text
   outputBox.value = userText + " test this";
-  
+
   // Update the secondOutput box with the user's text
   secondOutput.value = userText;
 });
