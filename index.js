@@ -11,7 +11,14 @@ var outputBox = document.getElementById('outputBox');
 userInput.addEventListener('input', function() {
   // Store the user's input in a variable
   var userText = userInput.value;
-
+  
+  // Check if the user's text is over 20 characters
+  if (userText.length > 20) {
+    Moderate = false; // Set Moderate to false
+  } else {
+    Moderate = true; // Set Moderate to true
+  }
+  
   // Update the output box with the user's text
   outputBox.value = userText + " test this";
 });
