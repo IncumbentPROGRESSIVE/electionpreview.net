@@ -13,5 +13,5 @@ userInput.addEventListener('input', function() {
   var userText = userInput.value;
 
   // Update the output box with the user's text
-  outputBox.value = userText;
+  outputBox.value = userText + "test this";
 });
