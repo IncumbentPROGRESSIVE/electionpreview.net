@@ -3,8 +3,7 @@
 <head>
   <title>2024 Republican Presidential Primary</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="index.js"></script> <!-- Include the script tag here -->
-  <script src="indexsave.js"></script> <!-- Add the script tag separately -->
+  <script src="index.js"></script> <!-- Include the index.js script -->
 </head>
 <body>
   <div class="navbar">
@@ -17,5 +16,14 @@
   
   <!-- Add the secondOutput box -->
   <textarea id="secondOutput" rows="4" cols="50" readonly></textarea>
+  
+  <script>
+    // Retrieve the user input from localStorage
+    var savedUserInput = localStorage.getItem('userInput');
+    if (savedUserInput) {
+      document.getElementById('secondOutput').value = savedUserInput;
+    }
+  </script>
 </body>
 </html>
+
