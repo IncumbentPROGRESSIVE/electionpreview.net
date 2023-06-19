@@ -12,31 +12,33 @@
   </div>
 
   <div class="header-container">
-    <h2 class="header">Election</h2>
+    <h2>Election Preview</h2>
   </div>
 
   <div class="iframe-container">
+    <div class="election-header">
+      <h2>Election</h2>
+    </div>
     <iframe src="https://steepatticstairs.github.io/ElectionMap/" title=""></iframe>
-    <div class="spacer"></div>
+  </div>
+
+  <div class="iframe-container">
+    <div class="election-header">
+      <h2>Election</h2>
+    </div>
     <iframe src="https://steepatticstairs.github.io/ElectionMap/?mode=senate" title=""></iframe>
-    <div class="spacer"></div>
+  </div>
+
+  <div class="iframe-container">
+    <div class="election-header">
+      <h2>Election</h2>
+    </div>
     <iframe src="https://steepatticstairs.github.io/ElectionMap/?mode=gubernatorial" title=""></iframe>
   </div>
 
-  <!-- Input text box -->
-  <div class="input-container">
-    <input type="text" id="userInput" class="textbox" placeholder="Enter something...">
-  </div>
-  
-  <div class ="spacer"></div>
- 
-  <!-- Output text box -->
-  <div class="output-container">
-    <input type="text" id="outputBox" class="textbox" readonly>
-  </div>
-  
+  <!-- Rest of the HTML code... -->
+
   <script src="index.js"></script>
-  
   <script>
     // Retrieve the user input from localStorage, if available
     var savedUserInput = localStorage.getItem('userInput');
@@ -52,3 +54,4 @@
   </script>
 </body>
 </html>
+
