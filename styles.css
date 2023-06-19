@@ -46,17 +46,18 @@ iframe {
 .header-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .iframe-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
+  align-items: center;
 }
 
-.election-header {
-  margin-left: 10px;
+.caption {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .switch-container {
@@ -94,5 +95,3 @@ iframe {
 .switch.on::before {
   transform: translateX(40px);
 }
-
-
