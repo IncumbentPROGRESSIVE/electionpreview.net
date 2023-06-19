@@ -78,3 +78,16 @@ iframe {
 .switch.on::before {
   transform: translateX(40px);
 }
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-container h2 {
+  margin: 0;
+  padding: 10px;
+}
+
