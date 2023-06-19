@@ -11,12 +11,10 @@ body {
 .navbar {
   background-color: #f1f1f1;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar a {
-  display: block;
+  display: inline-block;
   color: #333;
   text-align: center;
   padding: 14px 16px;
