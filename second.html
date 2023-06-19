@@ -2,7 +2,44 @@
 <html>
 <head>
   <title>2024 Republican Presidential Primary</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .switch {
+      position: relative;
+      width: 80px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .switch::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 0.3s;
+    }
+    
+    .switch.on {
+      background-color: #2196F3;
+    }
+    
+    .switch.on::before {
+      transform: translateX(40px);
+    }
+  </style>
   <script src="index.js"></script> <!-- Include the index.js script -->
 </head>
 <body>
@@ -14,7 +51,9 @@
 
   <h1>Republican Presidential Primary</h1>
   
-  <!-- Add the secondOutput box -->
+  <!-- Add the switch element -->
+  <div class="switch" onclick="toggleSwitch(this)"></div>
+  
   <textarea id="secondOutput" rows="4" cols="50" readonly></textarea>
   
   <script>
@@ -23,7 +62,11 @@
     if (savedUserInput) {
       document.getElementById('secondOutput').value = savedUserInput;
     }
+    
+    // Function to toggle the switch
+    function toggleSwitch(switchElement) {
+      switchElement.classList.toggle("on");
+    }
   </script>
 </body>
 </html>
-
