@@ -1,3 +1,15 @@
+// Retrieve the user input from localStorage, if available
+var savedUserInput = localStorage.getItem('userInput');
+if (savedUserInput) {
+  userInput.value = savedUserInput;
+}
+
+// Listen for when the input box's value changes
+userInput.addEventListener('input', function() {
+  // Store the user's input in localStorage
+  localStorage.setItem('userInput', userInput.value);
+});
+
 // Declare two boolean variables
 let Republican = false;
 let Democrat = false;
@@ -6,20 +18,29 @@ let Moderate = true;
 // Get the input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
-var secondOutput = document.getElementById('userInput');
+var secondOutput = document.getElementById('secondOutput');
 
-// Retrieve the user input from localStorage, if available
-var savedUserInput = localStorage.getItem('userInput');
-if (savedUserInput) {
-  userInput.value = savedUserInput;
-  outputBox.value = savedUserInput + " test this";
-  secondOutput.value = savedUserInput;
+var iframeContainer = document.querySelector('.iframe-container');
+var electionIframe = document.querySelector('#electionIframe');
+
+var toggleButton = document.createElement('button');
+toggleButton.textContent = 'Change';
+toggleButton.addEventListener('click', toggleIframeMode);
+
+iframeContainer.appendChild(toggleButton);
+
+function toggleIframeMode() {
+  if (electionIframe.src.includes('senate')) {
+    electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=gubernatorial';
+    toggleButton.textContent = 'Gubernatorial';
+  } else if (electionIframe.src.includes('gubernatorial')) {
+    electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/';
+    toggleButton.textContent = 'Normal';
+  } else {
+    electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=senate';
+    toggleButton.textContent = 'Senate';
+  }
 }
-
-// Listen for when the input box's value changes
-userInput.addEventListener('input', function() {
-  // Store the user's input in localStorage
-  localStorage.setItem('userInput', userInput.value);
 
   // Store the user's input in a variable
   var userText = userInput.value;
@@ -37,3 +58,5 @@ userInput.addEventListener('input', function() {
   // Update the secondOutput box with the user's text
   secondOutput.value = userText;
 });
+
+
