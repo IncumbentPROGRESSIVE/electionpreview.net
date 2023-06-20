@@ -18,7 +18,7 @@ let Moderate = true;
 // Get the input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
-var secondOutput = document.getElementById('secondOutput');
+
 
 var iframeContainer = document.querySelector('.iframe-container');
 var electionIframe = document.querySelector('#electionIframe');
