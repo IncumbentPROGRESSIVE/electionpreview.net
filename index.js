@@ -1,21 +1,17 @@
-// Retrieve the user input from localStorage, if available
-var savedUserInput = localStorage.getItem('userInput');
-if (savedUserInput) {
-  userInput.value = savedUserInput;
-}
+// Get the input and output elements
+var userInput = document.getElementById('userInput');
+var outputBox = document.getElementById('outputBox');
 
 // Listen for when the input box's value changes
 userInput.addEventListener('input', function() {
-  
+  // Store the user's input in a variable
+  var userText = userInput.value;
+
   // Store the user's input in localStorage
-  localStorage.setItem('userInput', userInput.value);
+  localStorage.setItem('userInput', userText);
   
   // Update the output box with the user's text
-outputBox.value = userText + " test this";
-
-  // Update the secondOutput box with the user's text
-secondOutput.value = userText;
-  
+  outputBox.value = userText + " test this";
 });
 
 var toggleButton = document.getElementById('toggleButton');
@@ -34,17 +30,19 @@ toggleButton.addEventListener('click', function() {
   }
 });
 
+// Retrieve the user input from localStorage, if available
+var savedUserInput = localStorage.getItem('userInput');
+if (savedUserInput) {
+  userInput.value = savedUserInput;
+  outputBox.value = savedUserInput + " test this";
+}
+
+
 // Declare two boolean variables
 let Republican = false;
 let Democrat = false;
 let Moderate = true;
 
-// Get the input and output elements
-var userInput = document.getElementById('userInput');
-var outputBox = document.getElementById('outputBox');
-
-// Store the user's input in a variable
-var userText = userInput.value;
 
 // Check if the user's text is over 20 characters
 if (userText.length > 20) {
