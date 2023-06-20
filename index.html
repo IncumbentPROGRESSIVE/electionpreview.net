@@ -21,6 +21,7 @@
     <div id="iframeContainer">
       <iframe id="electionIframe" src="https://steepatticstairs.github.io/ElectionMap/" title=""></iframe>
     </div>
+    <button id="toggleButton">Change</button>
   </div>
 
   <div class="spacer"></div>
@@ -38,9 +39,9 @@
   <div class="spacer"></div>
 
   <script src="index.js"></script>
-
-   <script>
-   // Retrieve the user input from localStorage, if available
+  
+  <script>
+    // Retrieve the user input from localStorage, if available
     var savedUserInput = localStorage.getItem('userInput');
     if (savedUserInput) {
       userInput.value = savedUserInput;
@@ -51,10 +52,10 @@
       // Store the user's input in localStorage
       localStorage.setItem('userInput', userInput.value);
     });
-   </script>
 
-  
+  </script>
 </body>
 </html>
+
 
 
