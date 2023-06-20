@@ -34,7 +34,6 @@ let Moderate = true;
 // Get the input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
-var secondOutput = document.getElementById('secondOutput');
 
 // Store the user's input in a variable
 var userText = userInput.value;
