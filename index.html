@@ -15,40 +15,22 @@
     <h1>2022 Midterm Elections</h1>
   </div>
 
-  <div class="spacer"></div>
-
   <div class="iframe-container">
     <div class="caption">House of Representatives</div>
     <div class="spacer"></div>
-    <iframe src="https://steepatticstairs.github.io/ElectionMap/" title=""></iframe>
+    <div id="iframeContainer">
+      <iframe id="electionIframe" src="https://steepatticstairs.github.io/ElectionMap/" title=""></iframe>
+    </div>
   </div>
 
   <div class="spacer"></div>
 
-  <div class="iframe-container">
-    <div class="caption">Senate</div>
-    <div class="spacer"></div>
-    <iframe src="https://steepatticstairs.github.io/ElectionMap/?mode=senate" title=""></iframe>
-  </div>
-
-  <div class="spacer"></div>
-
-  <div class="iframe-container">
-    <div class="caption">Gubernatorial</div>
-    <div class="spacer"></div>
-    <iframe src="https://steepatticstairs.github.io/ElectionMap/?mode=gubernatorial" title=""></iframe>
-  </div>
-
-  <div class="spacer"></div>
-
-  <!-- Input text box -->
   <div class="input-container">
     <input type="text" id="userInput" class="textbox" placeholder="Enter something...">
   </div>
 
   <div class ="spacer"></div>
 
-  <!-- Output text box -->
   <div class="output-container">
     <input type="text" id="outputBox" class="textbox" readonly>
   </div>
@@ -56,8 +38,8 @@
   <div class="spacer"></div>
 
   <script src="index.js"></script>
-  <script>
-    // Retrieve the user input from localStorage, if available
+
+   // Retrieve the user input from localStorage, if available
     var savedUserInput = localStorage.getItem('userInput');
     if (savedUserInput) {
       userInput.value = savedUserInput;
@@ -68,7 +50,9 @@
       // Store the user's input in localStorage
       localStorage.setItem('userInput', userInput.value);
     });
-  </script>
+
+
+  
 </body>
 </html>
 
