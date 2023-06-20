@@ -10,26 +10,10 @@ userInput.addEventListener('input', function() {
   localStorage.setItem('userInput', userInput.value);
 });
 
-// Declare two boolean variables
-let Republican = false;
-let Democrat = false;
-let Moderate = true;
+var toggleButton = document.getElementById('toggleButton');
+var electionIframe = document.getElementById('electionIframe');
 
-// Get the input and output elements
-var userInput = document.getElementById('userInput');
-var outputBox = document.getElementById('outputBox');
-
-
-var iframeContainer = document.querySelector('.iframe-container');
-var electionIframe = document.querySelector('#electionIframe');
-
-var toggleButton = document.createElement('button');
-toggleButton.textContent = 'Change';
-toggleButton.addEventListener('click', toggleIframeMode);
-
-iframeContainer.appendChild(toggleButton);
-
-function toggleIframeMode() {
+toggleButton.addEventListener('click', function() {
   if (electionIframe.src.includes('senate')) {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=gubernatorial';
     toggleButton.textContent = 'Gubernatorial';
@@ -40,23 +24,33 @@ function toggleIframeMode() {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=senate';
     toggleButton.textContent = 'Senate';
   }
+});
+
+// Declare two boolean variables
+let Republican = false;
+let Democrat = false;
+let Moderate = true;
+
+// Get the input and output elements
+var userInput = document.getElementById('userInput');
+var outputBox = document.getElementById('outputBox');
+var secondOutput = document.getElementById('secondOutput');
+
+// Store the user's input in a variable
+var userText = userInput.value;
+
+// Check if the user's text is over 20 characters
+if (userText.length > 20) {
+  Moderate = false; // Set Moderate to false
+} else {
+  Moderate = true; // Set Moderate to true
 }
 
-  // Store the user's input in a variable
-  var userText = userInput.value;
+// Update the output box with the user's text
+outputBox.value = userText + " test this";
 
-  // Check if the user's text is over 20 characters
-  if (userText.length > 20) {
-    Moderate = false; // Set Moderate to false
-  } else {
-    Moderate = true; // Set Moderate to true
-  }
+// Update the secondOutput box with the user's text
+secondOutput.value = userText;
 
-  // Update the output box with the user's text
-  outputBox.value = userText + " test this";
-
-  // Update the secondOutput box with the user's text
-  secondOutput.value = userText;
-});
 
 
