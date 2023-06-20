@@ -31,7 +31,7 @@ body {
 
 iframe {
   width: 100%;
-  height: 80vh; /* This would make the iframe 80% of the viewport height */
+  height: 800px
   border: none;
 }
 
