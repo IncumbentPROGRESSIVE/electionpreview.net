@@ -6,8 +6,16 @@ if (savedUserInput) {
 
 // Listen for when the input box's value changes
 userInput.addEventListener('input', function() {
+  
   // Store the user's input in localStorage
   localStorage.setItem('userInput', userInput.value);
+  
+  // Update the output box with the user's text
+outputBox.value = userText + " test this";
+
+  // Update the secondOutput box with the user's text
+secondOutput.value = userText;
+  
 });
 
 var toggleButton = document.getElementById('toggleButton');
@@ -45,11 +53,9 @@ if (userText.length > 20) {
   Moderate = true; // Set Moderate to true
 }
 
-// Update the output box with the user's text
-outputBox.value = userText + " test this";
 
-// Update the secondOutput box with the user's text
-secondOutput.value = userText;
+
+
 
 
 
