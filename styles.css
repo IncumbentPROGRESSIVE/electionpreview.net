@@ -59,6 +59,7 @@ iframe {
 
 #iframeContainer {
   width: 100%; /* add this line */
+  height: 100%;
 }
 
 .caption {
