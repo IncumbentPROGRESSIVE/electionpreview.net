@@ -12,12 +12,12 @@ body {
   background-color: #f1f1f1;
   overflow: hidden;
   padding: 10px;
+  text-align: center; /* Add this line to center the links */
 }
 
 .navbar a {
   display: inline-block;
   color: #333;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -27,16 +27,21 @@ body {
   color: black;
 }
 
-article {
-  margin: 20px auto; /* Auto margins on left and right center the article */
-  max-width: 800px; /* Adjust as needed */
-  padding: 0 20px; /* Padding for a bit of space on either side of the text */
+h1 {
+  text-align: center; /* Center the main heading */
 }
 
-h1, h2, h3 {
+article {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+h2, h3 {
   color: #555;
 }
 
 p {
   margin: 10px 0; 
 }
+
