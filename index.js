@@ -23,7 +23,7 @@ toggleButton.addEventListener('click', function() {
     toggleButton.textContent = 'Gubernatorial';
   } else if (electionIframe.src.includes('gubernatorial')) {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/';
-    toggleButton.textContent = 'Normal';
+    toggleButton.textContent = 'House';
   } else {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=senate';
     toggleButton.textContent = 'Senate';
