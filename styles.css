@@ -23,7 +23,7 @@ html, body {
 }
 
 .navbar-logo {
-  float: right;
+  float: left;
   height: 50px;  /* Or any size as you wish */
   padding: 7px;  /* Adjust as needed for vertical alignment */
 }
