@@ -22,6 +22,12 @@ html, body {
   text-decoration: none;
 }
 
+.navbar-logo {
+  float: right;
+  height: 50px;  /* Or any size as you wish */
+  padding: 7px;  /* Adjust as needed for vertical alignment */
+}
+
 .navbar a:hover {
   background-color: #ddd;
 }
