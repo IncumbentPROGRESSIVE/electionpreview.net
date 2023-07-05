@@ -149,4 +149,28 @@ button#toggleButton:hover {
   color: white;
 }
 
+.article-container {
+  font-family: 'Roboto', sans-serif;
+  color: #333; 
+  line-height: 1.6; 
+  text-align: left; 
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.article-container h1 {
+  text-align: center; 
+}
+
+.article-container h2, .article-container h3 {
+  color: #555;
+}
+
+.article-container p {
+  margin: 10px 0; 
+}
+
+
 
