@@ -70,11 +70,10 @@ darkModeButton.addEventListener('click', () => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  // Check for dark mode preference on page load
-  if(localStorage.getItem('dark-mode') === 'true') {
-    document.body.classList.add('dark-mode');
-  }
+// Check for dark mode preference on page load
+if(localStorage.getItem('dark-mode') === 'true') {
+  document.body.classList.add('dark-mode');
+}
 
   // Add event listener to the dark mode button
   document.getElementById('darkModeButton').addEventListener('click', function() {
