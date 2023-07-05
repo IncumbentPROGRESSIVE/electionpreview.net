@@ -1,6 +1,10 @@
 // Get input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
+var toggleButton = document.getElementById('toggleButton');
+var electionIframe = document.getElementById('electionIframe');
+var caption = document.querySelector('.caption');
+var darkModeButton = document.getElementById('darkModeButton');
 
 // Listen for when the input box's value changes
 userInput.addEventListener('input', function() {
@@ -13,9 +17,6 @@ userInput.addEventListener('input', function() {
   // Update the output box with the user's text
   outputBox.value = userText + " test this";
 });
-
-var toggleButton = document.getElementById('toggleButton');
-var electionIframe = document.getElementById('electionIframe');
 
 toggleButton.addEventListener('click', function() {
   if (electionIframe.src.includes('senate')) {
@@ -54,10 +55,6 @@ if (userText.length > 20) {
   Moderate = true; // Set Moderate to true
 }
 
-document.getElementById('darkModeButton').addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-});
-
 darkModeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   darkModeButton.classList.toggle('on');
@@ -74,16 +71,3 @@ darkModeButton.addEventListener('click', () => {
 if(localStorage.getItem('dark-mode') === 'true') {
   document.body.classList.add('dark-mode');
 }
-
-  // Add event listener to the dark mode button
-  document.getElementById('darkModeButton').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
-  });
-});
-
-
-
-
-
-
