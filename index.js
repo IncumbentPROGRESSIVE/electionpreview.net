@@ -57,3 +57,17 @@ if (userText.length > 20) {
 document.getElementById('darkModeButton').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 });
+
+darkModeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  darkModeButton.classList.toggle('on');
+  
+  // Save Dark Mode setting in localStorage
+  if (darkModeButton.classList.contains('on')) {
+    localStorage.setItem('darkMode', 'on');
+  } else {
+    localStorage.removeItem('darkMode');
+  }
+});
+
+
