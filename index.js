@@ -53,17 +53,3 @@ if (userText.length > 20) {
 } else {
   Moderate = true; // Set Moderate to true
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('darkModeButton').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-  });
-});
-
-
-
-
-
-
-
