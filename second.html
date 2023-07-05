@@ -38,6 +38,13 @@
   localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
 }); </script>
 
+  <script> >window.addEventListener('DOMContentLoaded', (event) => {
+  // Check for dark mode preference on page load
+  if(localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add('dark-mode');
+  } </script>
+
+
 </body>
 </html>
 
