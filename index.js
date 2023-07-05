@@ -70,11 +70,21 @@ darkModeButton.addEventListener('click', () => {
   }
 });
 
-
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Check for dark mode preference on page load
   if(localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark-mode');
   }
+
+  // Add event listener to the dark mode button
+  document.getElementById('darkModeButton').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
+  });
 });
+
+
+
+
 
 
