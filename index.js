@@ -60,14 +60,18 @@ darkModeButton.addEventListener('click', () => {
   darkModeButton.classList.toggle('on');
   
   // Save Dark Mode setting in localStorage
-  if (darkModeButton.classList.contains('on')) {
-    localStorage.setItem('darkMode', 'on');
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('dark-mode', 'true');
   } else {
-    localStorage.removeItem('darkMode');
+    localStorage.setItem('dark-mode', 'false');
   }
 });
 
-// Check for dark mode preference on page load
-if(localStorage.getItem('dark-mode') === 'true') {
-  document.body.classList.add('dark-mode');
-}
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Check for dark mode preference on page load
+  if(localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add('dark-mode');
+    darkModeButton.classList.add('on');
+  }
+});
+
