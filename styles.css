@@ -151,7 +151,7 @@ button#toggleButton:hover {
 
 
 button#darkModeButton {
-  background-color: #007BFF; 
+  background-color: #808080; 
   border: none;
   color: white;
   padding: 15px 32px; 
@@ -166,7 +166,7 @@ button#darkModeButton {
 }
 
 button#darkModeButton:hover {
-  background-color: #0069D9; 
+  background-color: #4D4D4D; 
   color: white;
 }
 
