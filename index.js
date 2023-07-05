@@ -26,11 +26,11 @@ toggleButton.addEventListener('click', function() {
   } else if (electionIframe.src.includes('gubernatorial')) {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/';
     toggleButton.textContent = 'House';
-     caption.textContent = 'House of Representatives'; // Change the caption text
+    caption.textContent = 'House of Representatives'; // Change the caption text
   } else {
     electionIframe.src = 'https://steepatticstairs.github.io/ElectionMap/?mode=senate';
     toggleButton.textContent = 'Senate';
-     caption.textContent = 'Senate'; // Change the caption text
+    caption.textContent = 'Senate'; // Change the caption text
   }
 });
 
@@ -39,20 +39,6 @@ var savedUserInput = localStorage.getItem('userInput');
 if (savedUserInput) {
   userInput.value = savedUserInput;
   outputBox.value = savedUserInput + " test this";
-}
-
-
-// Declare two boolean variables
-let Republican = false;
-let Democrat = false;
-let Moderate = true;
-
-
-// Check if the user's text is over 20 characters
-if (userText.length > 20) {
-  Moderate = false; // Set Moderate to false
-} else {
-  Moderate = true; // Set Moderate to true
 }
 
 darkModeButton.addEventListener('click', () => {
@@ -73,5 +59,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('dark-mode');
     darkModeButton.classList.add('on');
   }
+
+  // Retrieve the user input from localStorage, if available
+  var savedUserInput = localStorage.getItem('userInput');
+  if (savedUserInput) {
+    userInput.value = savedUserInput;
+    outputBox.value = savedUserInput + " test this";
+  }
 });
+
 
