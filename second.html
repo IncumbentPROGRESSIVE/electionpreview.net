@@ -22,28 +22,21 @@
     <div class="switch" onclick="toggleSwitch(this)"></div>
   </div>
 
-  <script>
-    var savedUserInput = localStorage.getItem('userInput');
-    if (savedUserInput) {
-      document.getElementById('secondOutput').value = savedUserInput + " test this";
-    }
-
-    function toggleSwitch(switchElement) {
-      switchElement.classList.toggle("on");
-    }
-  </script>
-
-  <script> document.getElementById('darkModeButton').addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
-}); </script>
-
-  <script> >window.addEventListener('DOMContentLoaded', (event) => {
+ <script>
+window.addEventListener('DOMContentLoaded', (event) => {
   // Check for dark mode preference on page load
   if(localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark-mode');
-  } </script>
+  }
+});
+</script>
 
+<script>
+document.getElementById('darkModeButton').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
+});
+</script>
 
 </body>
 </html>
