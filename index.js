@@ -20,32 +20,33 @@ toggleButton.addEventListener('click', function() {
   }
 });
 
+var darkModeButton = document.getElementById('darkModeButton');
+var darkModeButton2 = document.getElementById('darkModeButton2');
+var darkModeButton3 = document.getElementById('darkModeButton3');
+
+function toggleDarkMode(event) {
+  document.body.classList.toggle('dark-mode');
+  event.target.classList.toggle('on');
+
+  // Save Dark Mode setting in localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('dark-mode', 'true');
+  } else {
+    localStorage.setItem('dark-mode', 'false');
+  }
+}
+
+if(darkModeButton) darkModeButton.addEventListener('click', toggleDarkMode);
+if(darkModeButton2) darkModeButton2.addEventListener('click', toggleDarkMode);
+if(darkModeButton3) darkModeButton3.addEventListener('click', toggleDarkMode);
+
+// Check for dark mode preference on page load
 window.addEventListener('DOMContentLoaded', (event) => {
-  // Check for dark mode preference on page load
   if(localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark-mode');
-    darkModeButton.classList.add('on');
+
+    if(darkModeButton) darkModeButton.classList.add('on');
+    if(darkModeButton2) darkModeButton2.classList.add('on');
+    if(darkModeButton3) darkModeButton3.classList.add('on');
   }
-
-  darkModeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    darkModeButton.classList.toggle('on');
-
-   darkModeButton2.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    darkModeButton.classList.toggle('on');
-
-    darkModeButton3.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    darkModeButton.classList.toggle('on');
-
-    // Save Dark Mode setting in localStorage
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('dark-mode', 'true');
-    } else {
-      localStorage.setItem('dark-mode', 'false');
-    }
-  });
 });
-
-
