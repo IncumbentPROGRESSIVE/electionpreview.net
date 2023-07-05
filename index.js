@@ -1,4 +1,4 @@
-// Get the input and output elements
+// Get input and output elements
 var userInput = document.getElementById('userInput');
 var outputBox = document.getElementById('outputBox');
 
