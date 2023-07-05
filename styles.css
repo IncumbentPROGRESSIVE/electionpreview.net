@@ -152,7 +152,7 @@ button#toggleButton:hover {
 
 //
 
-button#darkModeButton {
+button#DarkModeButton {
   background-color: #007BFF; 
   border: none;
   color: white;
