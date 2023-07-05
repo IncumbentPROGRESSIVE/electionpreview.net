@@ -9,7 +9,7 @@
     <a href="index.html">2022 Election Preview</a>
     <a href="second.html">Republican Presidential Primary</a>
     <a href="third.html">Articles</a>
-     <img src="https://electionpreview.net/wp-content/uploads/2022/09/EP.png" class="navbar-logo" alt="Election Preview Logo">
+    <img src="https://electionpreview.net/wp-content/uploads/2022/09/EP.png" class="navbar-logo" alt="Election Preview Logo">
     <button id="darkModeButton">Dark Mode</button>
   </div>
 
@@ -23,9 +23,9 @@
     <div id="iframeContainer">
       <iframe id="electionIframe" src="https://steepatticstairs.github.io/ElectionMap/" title=""></iframe>
     </div>
-     <div class="spacer"></div>
+    <div class="spacer"></div>
     <button id="toggleButton">Change</button>
-     <div class="spacer"></div>
+    <div class="spacer"></div>
   </div>
 
   <div class="spacer"></div>
@@ -34,7 +34,7 @@
     <input type="text" id="userInput" class="textbox" placeholder="Enter something...">
   </div>
 
-  <div class ="spacer"></div>
+  <div class="spacer"></div>
 
   <div class="output-container">
     <input type="text" id="outputBox" class="textbox" readonly>
@@ -42,27 +42,11 @@
 
   <div class="spacer"></div>
 
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
 
- <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-  // Check for dark mode preference on page load
-  if(localStorage.getItem('dark-mode') === 'true') {
-    document.body.classList.add('dark-mode');
-  }
-});
-</script>
-
-<script>
-document.getElementById('darkModeButton').addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
-});
-</script>
-
-  
 </body>
 </html>
+
 
 
 
