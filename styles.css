@@ -42,8 +42,8 @@ html, body {
 
 .navbar-logo {
   float: left;
-  height: 50px;  /* Or any size as you wish */
-  padding: 7px;  /* Adjust as needed for vertical alignment */
+  height: 50px; 
+  padding: 7px; 
 }
 
 .navbar a:hover {
@@ -56,7 +56,7 @@ html, body {
 
 iframe {
   width: 100%;
-  height: 100%; /* This allows it to take up all available space in #iframeContainer */
+  height: 100%; 
   border: none;
 }
 
@@ -79,13 +79,13 @@ iframe {
   flex-direction: column;
   align-items: center;
   width: 90%; 
-  height: 90%; /* Adjust based on your preference */
+  height: 90%;
   margin: 0 auto; 
 }
 
 #iframeContainer {
   width: 100%; 
-  height: 100%; /* This allows it to take up all available space in the .iframe-container */
+  height: 100%; 
 }
 
 .caption {
@@ -130,22 +130,22 @@ iframe {
 }
 
 button#toggleButton {
-  background-color: #007BFF; /* Change this to your desired shade of blue */
+  background-color: #007BFF; 
   border: none;
   color: white;
-  padding: 15px 32px; /* Adjust padding to match your design */
+  padding: 15px 32px; 
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 16px; 
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 12px; /* Gives the button rounded corners */
-  transition-duration: 0.4s; /* Adds a smooth transition effect on hover */
+  border-radius: 12px; 
+  transition-duration: 0.4s; 
 }
 
 button#toggleButton:hover {
-  background-color: #0069D9; /* Darker shade of blue for hover effect */
+  background-color: #0069D9; 
   color: white;
 }
 
