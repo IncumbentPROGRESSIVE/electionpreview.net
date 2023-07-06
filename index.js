@@ -3,7 +3,8 @@ var toggleButton = document.getElementById('toggleButton');
 var electionIframe = document.getElementById('electionIframe');
 var caption = document.querySelector('.caption');
 var darkModeButton = document.getElementById('darkModeButton');
-
+var darkModeButton2 = document.getElementById('darkModeButton2');
+var darkModeButton3 = document.getElementById('darkModeButton3');
 
 
 toggleButton.addEventListener('click', function() {
@@ -27,7 +28,31 @@ toggleButton.addEventListener('click', function() {
 darkModeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   darkModeButton.classList.toggle('on');
-  
+
+  // Save Dark Mode setting in localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('dark-mode', 'true');
+  } else {
+    localStorage.setItem('dark-mode', 'false');
+  }
+});
+
+darkModeButton2.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  darkModeButton2.classList.toggle('on');
+
+  // Save Dark Mode setting in localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('dark-mode', 'true');
+  } else {
+    localStorage.setItem('dark-mode', 'false');
+  }
+});
+
+darkModeButton3.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  darkModeButton3.classList.toggle('on');
+
   // Save Dark Mode setting in localStorage
   if (document.body.classList.contains('dark-mode')) {
     localStorage.setItem('dark-mode', 'true');
@@ -38,8 +63,10 @@ darkModeButton.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   // Check for dark mode preference on page load
-  if(localStorage.getItem('dark-mode') === 'true') {
+  if (localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark-mode');
     darkModeButton.classList.add('on');
+    darkModeButton2.classList.add('on');
+    darkModeButton3.classList.add('on');
   }
 });
