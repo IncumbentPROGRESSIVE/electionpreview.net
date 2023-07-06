@@ -171,6 +171,48 @@ button#darkModeButton:hover {
   color: white;
 }
 
+button#darkModeButton2 {
+  float: right;
+  background-color: #808080; 
+  border: none;
+  color: white;
+  padding: 10px 15px; /* Reduced padding */
+  text-decoration: none;
+  font-size: 14px; /* Reduced font size */
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px; 
+  transition-duration: 0.4s;
+  align-self: center; /* Align the button vertically center */
+}
+
+
+button#darkModeButton2:hover {
+  background-color: #4D4D4D; 
+  color: white;
+}
+
+button#darkModeButton3 {
+  float: right;
+  background-color: #808080; 
+  border: none;
+  color: white;
+  padding: 10px 15px; /* Reduced padding */
+  text-decoration: none;
+  font-size: 14px; /* Reduced font size */
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px; 
+  transition-duration: 0.4s;
+  align-self: center; /* Align the button vertically center */
+}
+
+
+button#darkModeButton3:hover {
+  background-color: #4D4D4D; 
+  color: white;
+}
+
 .article-container {
   font-family: 'Roboto', sans-serif;
   color: #333; 
