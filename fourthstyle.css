@@ -1,0 +1,68 @@
+/* Apply styles to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Background color for the entire page */
+}
+
+/* Style the chart container */
+#chart-container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the chart on the page */
+    background-color: #ffffff; /* Background color for the chart container */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the chart container */
+}
+
+/* Style the chart title */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the chart tooltip */
+.google-visualization-tooltip {
+    background-color: #ffffff; /* Background color for the tooltip */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Style the chart tooltip arrow */
+.google-visualization-tooltip:before {
+    border-bottom-color: #ffffff; /* Match the tooltip background color */
+}
+
+/* Style the chart legend */
+.google-visualization-legend {
+    margin-top: 20px;
+}
+
+/* Style the chart series colors */
+.google-visualization-tooltip-item {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Style the chart axis labels */
+.google-visualization-text {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Style the chart background */
+.google-visualization-background {
+    fill: #f5f5f5; /* Background color for the chart */
+}
+
+/* Add styles for responsive design (optional) */
+@media (max-width: 768px) {
+    #chart-container {
+        width: 100%;
+    }
+}
