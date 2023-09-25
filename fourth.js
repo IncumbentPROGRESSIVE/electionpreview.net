@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  <link rel="stylesheet" type="text/css" href="fourthstyle.css">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['corechart']});
@@ -285,11 +283,40 @@ data.addRows([
 ]);
 
 var options = {
-title: '2024 General Election Polling Aggregate',
-curveType: 'none',
-legend: { position: 'bottom' },
-vAxis: { format: 'percent' },
-tooltip: { isHtml: true }
+    title: 'My Chart Title',
+    titleTextStyle: {
+        color: '#333', // Title text color
+        fontSize: 18,  // Title text font size
+        bold: true     // Make title text bold
+    },
+    legend: {
+        position: 'right', // Position of the legend
+        textStyle: {
+            color: '#555', // Legend text color
+            fontSize: 14   // Legend text font size
+        }
+    },
+    pieHole: 0.4, // Add a hole in the middle (for a donut chart)
+    pieSliceTextStyle: {
+        color: 'white', // Pie slice text color
+        fontSize: 12    // Pie slice text font size
+    },
+    slices: {
+        0: { color: '#e7711c' }, // Custom color for slice 0
+        1: { color: '#4285f4' }, // Custom color for slice 1
+        2: { color: '#f4b400' }, // Custom color for slice 2
+        3: { color: '#0f9d58' }  // Custom color for slice 3
+    },
+    backgroundColor: {
+        fill: 'transparent' // Chart background color (transparent in this case)
+    },
+    chartArea: {
+        left: 50,    // Adjust the left margin of the chart area
+        top: 50,     // Adjust the top margin of the chart area
+        width: '80%', // Adjust the width of the chart area
+        height: '70%' // Adjust the height of the chart area
+    },
+    pieStartAngle: 90 // Rotate the pie chart to start at a different angle (degrees)
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
