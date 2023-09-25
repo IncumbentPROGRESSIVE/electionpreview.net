@@ -283,20 +283,21 @@ data.addRows([
 ]);
 
 var options = {
-        title: '2024 aggregate',
-        curveType: 'function',
-        legend: { position: 'bottom' },
-        backgroundColor: '#f1f8e9',  // Set your background color
-        series: {
-          0: { color: 'blue' },  // Customize the color of the first series
-          1: { color: 'red' }    // Customize the color of the second series
-        }
-      };
+  title: 'Biden vs. Trump Polling',
+  curveType: 'function', // You can choose different curve types
+  legend: { position: 'bottom' },
+  vAxis: {
+    title: 'Percentage',
+    minValue: 0, // Adjust as needed
+    maxValue: 100, // Adjust as needed
+  },
+  hAxis: {
+    title: 'Date',
+  },
+};
 
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
+var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+chart.draw(data, options);
 </script>
 </head>
 <body>
